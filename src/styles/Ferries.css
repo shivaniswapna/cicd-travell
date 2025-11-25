@@ -1,0 +1,115 @@
+.ferries {
+  padding: 6rem 0 2rem;
+  width: 100%;
+}
+
+.ferries h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  font-size: 3rem;
+}
+
+.ferries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ferry-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ferry-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ferry-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.ferry-info {
+  padding: 2rem;
+}
+
+.ferry-info h3 {
+  margin: 0 0 0.75rem 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.ferry-info p {
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.price {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 1.5rem;
+}
+
+.book-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Dark mode */
+.dark .ferries h1 {
+  color: white;
+}
+
+.dark .ferry-card {
+  background: #2c3e50;
+  color: white;
+}
+
+.dark .ferry-info h3 {
+  color: white;
+}
+
+.dark .ferry-info p {
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ferries {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .ferries h1 {
+    font-size: 2rem;
+  }
+
+  .ferries-grid {
+    grid-template-columns: 1fr;
+  }
+}
